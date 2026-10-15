@@ -1,16 +1,28 @@
-import React from 'react'
-
-function ICard() {
-    let a=9009;
-  let name="NEERAV"
+function ICard({ data }) {
   return (
-    <div>
-        <h2 style={{backgroundColor:'brown',color:'white'}}>ABES ICard Component</h2>
-
-      <h2 style={{color:'red'}}>Welcome to React using Vite</h2>
-      <h2 style={{color:'red'}}>Value of a={a}</h2>
-      <h2 style={{color:'red'}}>Name={name}</h2>
-
+    <div
+      style={{
+        border: '10px solid red',
+        width: '200px',
+        minHeight: '360px',
+        margin: 'auto',
+        padding: '8px',
+        textAlign: 'center',
+      }}
+    >
+      <h2 style={{ backgroundColor: 'blue', color: 'white' }}>
+        ABES ENGINEERING COLLEGE
+      </h2>
+      <img
+        src={data.image}
+        height="100"
+        width="100"
+        style={{ borderRadius: '50%', objectFit: 'cover' }}
+        alt={`${data.name} student portrait`}
+      />
+      <h3>Roll No. = {data.roll}</h3>
+      <h3>Name = {data.name}</h3>
+      <h3>Branch = {data.branch}</h3>
     </div>
   )
 }
