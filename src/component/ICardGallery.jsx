@@ -1,5 +1,5 @@
 import ICard from './ICard'
-import image from '../assets/photo.jpg'
+import image from '../assets/hero.png'
 
 function ICardGallery() {
   const students = [
