@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import photos from '../assets/photos.jpg'
+import photos from '../assets/hero.png'
 
 function Imagemanipulation() {
   const [photosHeight, setPhotosHeight] = useState(200)
   const [photosWidth, setPhotosWidth] = useState(200)
   const [photosAngle, setPhotosAngle] = useState(30)
-  const [boxMarginLeft, setBoxMarginLeft] = useState(200)
+  const [boxMarginLeft, setBoxMarginLeft] = useState(20)
 
   function setHeight() {
     setPhotosHeight((height) => height + 10)
@@ -20,7 +20,7 @@ function Imagemanipulation() {
   }
 
   function moveLeft() {
-    setBoxMarginLeft((margin) => margin - 50)
+    setBoxMarginLeft((margin) => Math.max(0, margin - 50))
   }
 
   function moveRight() {
@@ -28,8 +28,8 @@ function Imagemanipulation() {
   }
 
   return (
-    <div>
-      <h2 style={{ color: 'red', backgroundColor: 'black' }}>
+    <div style={{ padding: '20px' }}>
+      <h2 style={{ color: 'red', backgroundColor: 'black', padding: '10px' }}>
         Image Manipulation
       </h2>
 
