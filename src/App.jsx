@@ -1,18 +1,22 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
-import ICard from "./component/ICard";
-import StateHandling from "./statehandling";
+import ICard from './component/ICard'
+import ICardGallery from './component/ICardGallery'
+import ImdbCard from './component/ImdbCard'
+import StateHandling from './component/StateHandling'
+import Imagemanipulation from './component/Imagemanipulation'
+import SampleUseEffect from './component/SampleUseEffect'
 
 function App() {
   return (
-    <div style={{ border: '2px solid black' }}>
-      <ICard />
-      <StateHandling />
+    <div>
+      {/* Switch the active component by uncommenting one of the examples below. */}
+      {/* <ICardGallery /> */}
+      {/* <ImdbCard /> */}
+      {/* <StateHandling /> */}
+      {/* <Imagemanipulation /> */}
+      <SampleUseEffect />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
